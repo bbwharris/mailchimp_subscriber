@@ -1,0 +1,25 @@
+== USAGE:
+
+class User < ActiveRecord::Base
+  subscribe_to "List Name", :using => { :api_key => MAILCHIMP_API_KEY,
+                                        :email => :email, 
+                                        :fields => {:FNAME => :first_name, :LNAME => :last_name}
+end
+
+When User is saved, it will be added to your MailChimp list "List Name".
+
+This assumes that you have @user.email, @user.first_name, @user.last_name setup as your models attributes. MailChimp expects FNAME, and LNAME, you can also specify any custom fields and they will be captured.
+
+When User is deleted it will automatically be unsubscribed from "List Name".
+
+== REQUIREMENTS:
+
+* hominid gem
+
+== INSTALL:
+
+  gem 'hominid'
+  gem 'mailchimp_subscriber'
+
+== LICENSE:
+  BSD License
