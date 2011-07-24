@@ -2,7 +2,7 @@ $:.push File.expand_path("../lib", __FILE__)
 
 Gem::Specification.new do |s|
   s.name        = "mailchimp_subscriber"
-  s.version     = '0.1.0'
+  s.version     = '0.1.22'
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Brandon Harris"]
   s.email       = ["brandon@brandon-harris.com"]

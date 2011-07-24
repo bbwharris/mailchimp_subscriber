@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'test/unit'
-require 'mailchimp_subscriber'
+require 'lib/mailchimp_subscriber/extensions'
 
 class User
   attr_accessor :email, :first_name, :last_name
