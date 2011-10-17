@@ -3,7 +3,7 @@
   class User < ActiveRecord::Base
     subscribe_to "List Name", :using => { :api_key => MAILCHIMP_API_KEY,
                                           :email => :email, 
-                                          :fields => {:FNAME => :first_name, :LNAME => :last_name}
+                                          :fields => {:FNAME => :first_name, :LNAME => :last_name}}
   end
 
 When User is saved, it will be added to your MailChimp list "List Name".
